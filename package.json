@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"oauth2-server",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "oauth2-server",
+    "description": "api documentation for [oauth2-server (v2.4.1)](https://github.com/thomseddon/node-oauth2-server) [![npm package](https://img.shields.io/npm/v/npmdoc-oauth2-server.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-oauth2-server) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-oauth2-server.svg)](https://travis-ci.org/npmdoc/node-npmdoc-oauth2-server)",
     "devDependencies": {
-        "oauth2-server": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "oauth2-server": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-oauth2-server",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-oauth2-server",
+    "keywords": [
+        "documentation",
+        "oauth2-server"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_oauth2_server.js",
+    "name": "npmdoc-oauth2-server",
+    "nameAlias": "npmdoc_oauth2_server",
+    "nameOriginal": "npmdoc-oauth2-server",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-oauth2-server.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
