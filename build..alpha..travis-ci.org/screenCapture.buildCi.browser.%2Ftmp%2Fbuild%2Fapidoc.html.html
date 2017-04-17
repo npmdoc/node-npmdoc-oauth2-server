@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/thomseddon/node-oauth2-server"
-
-    >oauth2-server (v2.4.1)</a>
+    <a href="https://github.com/thomseddon/node-oauth2-server">oauth2-server (v2.4.1)</a>
 </h1>
 <h4>Complete, compliant and well tested module for implementing an OAuth2 Server/Provider with express in node.js</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.oauth2-server">module oauth2-server</a><ol>
 
@@ -254,12 +247,12 @@
 
   config = config || {};
 
-  if (!config.model) throw new Error(&#x27;No model supplied to OAuth2Server&#x27;);
+  if (!config.model) throw new Error('No model supplied to OAuth2Server');
   this.model = config.model;
 
   this.grants = config.grants || [];
   this.debug = config.debug || function () {};
-  if (typeof this.debug !== &#x27;function&#x27;) {
+  if (typeof this.debug !== 'function') {
       this.debug = console.log;
   }
   this.passthroughErrors = config.passthroughErrors;
@@ -273,7 +266,7 @@
 
   this.regex = {
     clientId: config.clientIdRegex || /^[a-z0-9-_]{3,40}$/i,
-    grantType: new RegExp(&#x27;^(&#x27; + this.grants.join(&#x27;|&#x27;) + &#x27;)$&#x27;, &#x27;i&#x27;)
+    grantType: new RegExp('^(' + this.grants.join('|') + ')$', 'i')
   };
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -297,10 +290,10 @@
 
   var self = this;
   runner(fns, this, function (err) {
-    if (err &#x26;&#x26; res.oauthRedirect) {
+    if (err &amp;&amp; res.oauthRedirect) {
       // Custom redirect error handler
-      res.redirect(self.client.redirectUri + &#x27;?error=&#x27; + err.error +
-        &#x27;&#x26;error_description=&#x27; + err.error_description + &#x27;&#x26;code=&#x27; + err.code);
+      res.redirect(self.client.redirectUri + '?error=' + err.error +
+        '&amp;error_description=' + err.error_description + '&amp;code=' + err.code);
 
       return self.config.continueAfterResponse ? next() : null;
     }
@@ -329,14 +322,14 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   model: {}, // See below for specification
-  grants: [&#x27;password&#x27;],
+  grants: ['password'],
   debug: true
 });
 
-app.all(&#x27;/oauth/token&#x27;, app.oauth.grant());
+app.all('/oauth/token', app.oauth.grant());
 
-app.get(&#x27;/&#x27;, app.oauth.<span class="apidocCodeKeywordSpan">authorise</span>(), function (req, res) {
-  res.send(&#x27;Secret area&#x27;);
+app.get('/', app.oauth.<span class="apidocCodeKeywordSpan">authorise</span>(), function (req, res) {
+  res.send('Secret area');
 });
 
 app.use(app.oauth.errorHandler());
@@ -371,22 +364,22 @@ app.listen(3000);
   }
 
   this.headers = {
-    &#x27;Cache-Control&#x27;: &#x27;no-store&#x27;,
-    &#x27;Pragma&#x27;: &#x27;no-cache&#x27;
+    'Cache-Control': 'no-store',
+    'Pragma': 'no-cache'
   };
 
   switch (error) {
-    case &#x27;invalid_client&#x27;:
-      this.headers[&#x27;WWW-Authenticate&#x27;] = &#x27;Basic realm=&#x22;Service&#x22;&#x27;;
+    case 'invalid_client':
+      this.headers['WWW-Authenticate'] = 'Basic realm="Service"';
 <span class="apidocCodeCommentSpan">      /* falls through */
-</span>    case &#x27;invalid_grant&#x27;:
-    case &#x27;invalid_request&#x27;:
+</span>    case 'invalid_grant':
+    case 'invalid_request':
       this.code = 400;
       break;
-    case &#x27;invalid_token&#x27;:
+    case 'invalid_token':
       this.code = 401;
       break;
-    case &#x27;server_error&#x27;:
+    case 'server_error':
       this.code = 503;
       break;
     default:
@@ -421,14 +414,14 @@ app.listen(3000);
 
 app.oauth = oauthserver({
   model: {}, // See below for specification
-  grants: [&#x27;password&#x27;],
+  grants: ['password'],
   debug: true
 });
 
-app.all(&#x27;/oauth/token&#x27;, app.oauth.<span class="apidocCodeKeywordSpan">grant</span>());
+app.all('/oauth/token', app.oauth.<span class="apidocCodeKeywordSpan">grant</span>());
 
-app.get(&#x27;/&#x27;, app.oauth.authorise(), function (req, res) {
-  res.send(&#x27;Secret area&#x27;);
+app.get('/', app.oauth.authorise(), function (req, res) {
+  res.send('Secret area');
 });
 
 app.use(app.oauth.errorHandler());
@@ -484,7 +477,7 @@ app.use(app.oauth.errorHandler());
     <li>description and source-code<pre class="apidocCodePre">function Token(config, type, callback) {
   if (config.model.generateToken) {
     config.model.generateToken(type, config.req, function (err, token) {
-      if (err) return callback(error(&#x27;server_error&#x27;, false, err));
+      if (err) return callback(error('server_error', false, err));
       if (!token) return generateRandomToken(callback);
       callback(false, token);
     });
@@ -518,10 +511,10 @@ app.use(app.oauth.errorHandler());
 
   var self = this;
   runner(fns, this, function (err) {
-    if (err &#x26;&#x26; res.oauthRedirect) {
+    if (err &amp;&amp; res.oauthRedirect) {
       // Custom redirect error handler
-      res.redirect(self.client.redirectUri + &#x27;?error=&#x27; + err.error +
-        &#x27;&#x26;error_description=&#x27; + err.error_description + &#x27;&#x26;code=&#x27; + err.code);
+      res.redirect(self.client.redirectUri + '?error=' + err.error +
+        '&amp;error_description=' + err.error_description + '&amp;code=' + err.code);
 
       return self.config.continueAfterResponse ? next() : null;
     }
@@ -555,14 +548,14 @@ app.use(app.oauth.errorHandler());
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   model: {}, // See below for specification
-  grants: [&#x27;password&#x27;],
+  grants: ['password'],
   debug: true
 });
 
-app.all(&#x27;/oauth/token&#x27;, app.oauth.grant());
+app.all('/oauth/token', app.oauth.grant());
 
-app.get(&#x27;/&#x27;, app.oauth.<span class="apidocCodeKeywordSpan">authorise</span>(), function (req, res) {
-  res.send(&#x27;Secret area&#x27;);
+app.get('/', app.oauth.<span class="apidocCodeKeywordSpan">authorise</span>(), function (req, res) {
+  res.send('Secret area');
 });
 
 app.use(app.oauth.errorHandler());
@@ -602,22 +595,22 @@ app.listen(3000);
   }
 
   this.headers = {
-    &#x27;Cache-Control&#x27;: &#x27;no-store&#x27;,
-    &#x27;Pragma&#x27;: &#x27;no-cache&#x27;
+    'Cache-Control': 'no-store',
+    'Pragma': 'no-cache'
   };
 
   switch (error) {
-    case &#x27;invalid_client&#x27;:
-      this.headers[&#x27;WWW-Authenticate&#x27;] = &#x27;Basic realm=&#x22;Service&#x22;&#x27;;
+    case 'invalid_client':
+      this.headers['WWW-Authenticate'] = 'Basic realm="Service"';
 <span class="apidocCodeCommentSpan">      /* falls through */
-</span>    case &#x27;invalid_grant&#x27;:
-    case &#x27;invalid_request&#x27;:
+</span>    case 'invalid_grant':
+    case 'invalid_request':
       this.code = 400;
       break;
-    case &#x27;invalid_token&#x27;:
+    case 'invalid_token':
       this.code = 401;
       break;
-    case &#x27;server_error&#x27;:
+    case 'server_error':
       this.code = 503;
       break;
     default:
@@ -670,14 +663,14 @@ app.listen(3000);
 
 app.oauth = oauthserver({
   model: {}, // See below for specification
-  grants: [&#x27;password&#x27;],
+  grants: ['password'],
   debug: true
 });
 
-app.all(&#x27;/oauth/token&#x27;, app.oauth.<span class="apidocCodeKeywordSpan">grant</span>());
+app.all('/oauth/token', app.oauth.<span class="apidocCodeKeywordSpan">grant</span>());
 
-app.get(&#x27;/&#x27;, app.oauth.authorise(), function (req, res) {
-  res.send(&#x27;Secret area&#x27;);
+app.get('/', app.oauth.authorise(), function (req, res) {
+  res.send('Secret area');
 });
 
 app.use(app.oauth.errorHandler());
@@ -746,7 +739,7 @@ app.use(app.oauth.errorHandler());
     <li>description and source-code<pre class="apidocCodePre">function Token(config, type, callback) {
   if (config.model.generateToken) {
     config.model.generateToken(type, config.req, function (err, token) {
-      if (err) return callback(error(&#x27;server_error&#x27;, false, err));
+      if (err) return callback(error('server_error', false, err));
       if (!token) return generateRandomToken(callback);
       callback(false, token);
     });
@@ -766,3 +759,4 @@ app.use(app.oauth.errorHandler());
     ]
 </div>
 </div>
+</body></html>

@@ -63,9 +63,98 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.oauth2-server">
+            function <span class="apidocSignatureSpan"></span>oauth2-server
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.authCodeGrant">
+            function <span class="apidocSignatureSpan">oauth2-server.</span>authCodeGrant
+            <span class="apidocSignatureSpan">(config, req, res, next, check)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.authorise">
+            function <span class="apidocSignatureSpan">oauth2-server.</span>authorise
+            <span class="apidocSignatureSpan">(config, req, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.error">
             function <span class="apidocSignatureSpan">oauth2-server.</span>error
             <span class="apidocSignatureSpan">(error, description, err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.grant">
+            function <span class="apidocSignatureSpan">oauth2-server.</span>grant
+            <span class="apidocSignatureSpan">(config, req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.runner">
+            function <span class="apidocSignatureSpan">oauth2-server.</span>runner
+            <span class="apidocSignatureSpan">(fns, context, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.toString">
+            function <span class="apidocSignatureSpan">oauth2-server.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.token">
+            function <span class="apidocSignatureSpan">oauth2-server.</span>token
+            <span class="apidocSignatureSpan">(config, type, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.oauth2-server.authCodeGrant">module oauth2-server.authCodeGrant</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.authCodeGrant.authCodeGrant">
+            function <span class="apidocSignatureSpan">oauth2-server.</span>authCodeGrant
+            <span class="apidocSignatureSpan">(config, req, res, next, check)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.oauth2-server.authorise">module oauth2-server.authorise</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.authorise.authorise">
+            function <span class="apidocSignatureSpan">oauth2-server.</span>authorise
+            <span class="apidocSignatureSpan">(config, req, next)</span>
             </a>
 
         </li>
@@ -94,10 +183,169 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.oauth2-server.grant">module oauth2-server.grant</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.grant.grant">
+            function <span class="apidocSignatureSpan">oauth2-server.</span>grant
+            <span class="apidocSignatureSpan">(config, req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.oauth2-server.runner">module oauth2-server.runner</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.runner.runner">
+            function <span class="apidocSignatureSpan">oauth2-server.</span>runner
+            <span class="apidocSignatureSpan">(fns, context, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.oauth2-server.toString">module oauth2-server.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.toString.toString">
+            function <span class="apidocSignatureSpan">oauth2-server.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.oauth2-server.token">module oauth2-server.token</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.oauth2-server.token.token">
+            function <span class="apidocSignatureSpan">oauth2-server.</span>token
+            <span class="apidocSignatureSpan">(config, type, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.oauth2-server" id="apidoc.module.oauth2-server">module oauth2-server</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.oauth2-server" id="apidoc.element.oauth2-server.oauth2-server">
+        function <span class="apidocSignatureSpan"></span>oauth2-server
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OAuth2Server(config) {
+
+  if (!(this instanceof OAuth2Server)) return new OAuth2Server(config);
+
+  config = config || {};
+
+  if (!config.model) throw new Error(&#x27;No model supplied to OAuth2Server&#x27;);
+  this.model = config.model;
+
+  this.grants = config.grants || [];
+  this.debug = config.debug || function () {};
+  if (typeof this.debug !== &#x27;function&#x27;) {
+      this.debug = console.log;
+  }
+  this.passthroughErrors = config.passthroughErrors;
+  this.continueAfterResponse = config.continueAfterResponse;
+
+  this.accessTokenLifetime = config.accessTokenLifetime !== undefined ?
+    config.accessTokenLifetime : 3600;
+  this.refreshTokenLifetime = config.refreshTokenLifetime !== undefined ?
+    config.refreshTokenLifetime : 1209600;
+  this.authCodeLifetime = config.authCodeLifetime || 30;
+
+  this.regex = {
+    clientId: config.clientIdRegex || /^[a-z0-9-_]{3,40}$/i,
+    grantType: new RegExp(&#x27;^(&#x27; + this.grants.join(&#x27;|&#x27;) + &#x27;)$&#x27;, &#x27;i&#x27;)
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.authCodeGrant" id="apidoc.element.oauth2-server.authCodeGrant">
+        function <span class="apidocSignatureSpan">oauth2-server.</span>authCodeGrant
+        <span class="apidocSignatureSpan">(config, req, res, next, check)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AuthCodeGrant(config, req, res, next, check) {
+  this.config = config;
+  this.model = config.model;
+  this.req = req;
+  this.res = res;
+  this.check = check;
+
+  var self = this;
+  runner(fns, this, function (err) {
+    if (err &#x26;&#x26; res.oauthRedirect) {
+      // Custom redirect error handler
+      res.redirect(self.client.redirectUri + &#x27;?error=&#x27; + err.error +
+        &#x27;&#x26;error_description=&#x27; + err.error_description + &#x27;&#x26;code=&#x27; + err.code);
+
+      return self.config.continueAfterResponse ? next() : null;
+    }
+
+    next(err);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.authorise" id="apidoc.element.oauth2-server.authorise">
+        function <span class="apidocSignatureSpan">oauth2-server.</span>authorise
+        <span class="apidocSignatureSpan">(config, req, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Authorise(config, req, next) {
+  this.config = config;
+  this.model = config.model;
+  this.req = req;
+
+  runner(fns, this, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  model: {}, // See below for specification
+  grants: [&#x27;password&#x27;],
+  debug: true
+});
+
+app.all(&#x27;/oauth/token&#x27;, app.oauth.grant());
+
+app.get(&#x27;/&#x27;, app.oauth.<span class="apidocCodeKeywordSpan">authorise</span>(), function (req, res) {
+  res.send(&#x27;Secret area&#x27;);
+});
+
+app.use(app.oauth.errorHandler());
+
+app.listen(3000);
+```
+...</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -149,6 +397,179 @@
   this.error_description = description || error;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.grant" id="apidoc.element.oauth2-server.grant">
+        function <span class="apidocSignatureSpan">oauth2-server.</span>grant
+        <span class="apidocSignatureSpan">(config, req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Grant(config, req, res, next) {
+  this.config = config;
+  this.model = config.model;
+  this.now = new Date();
+  this.req = req;
+  this.res = res;
+
+  runner(fns, this, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.oauth = oauthserver({
+  model: {}, // See below for specification
+  grants: [&#x27;password&#x27;],
+  debug: true
+});
+
+app.all(&#x27;/oauth/token&#x27;, app.oauth.<span class="apidocCodeKeywordSpan">grant</span>());
+
+app.get(&#x27;/&#x27;, app.oauth.authorise(), function (req, res) {
+  res.send(&#x27;Secret area&#x27;);
+});
+
+app.use(app.oauth.errorHandler());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.runner" id="apidoc.element.oauth2-server.runner">
+        function <span class="apidocSignatureSpan">oauth2-server.</span>runner
+        <span class="apidocSignatureSpan">(fns, context, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runner(fns, context, next) {
+  var last = fns.length - 1;
+
+  (function run(pos) {
+    fns[pos].call(context, function (err) {
+      if (err || pos === last) return next(err);
+      run(++pos);
+    });
+  })(0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.toString" id="apidoc.element.oauth2-server.toString">
+        function <span class="apidocSignatureSpan">oauth2-server.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.token" id="apidoc.element.oauth2-server.token">
+        function <span class="apidocSignatureSpan">oauth2-server.</span>token
+        <span class="apidocSignatureSpan">(config, type, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Token(config, type, callback) {
+  if (config.model.generateToken) {
+    config.model.generateToken(type, config.req, function (err, token) {
+      if (err) return callback(error(&#x27;server_error&#x27;, false, err));
+      if (!token) return generateRandomToken(callback);
+      callback(false, token);
+    });
+  } else {
+    generateRandomToken(callback);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.oauth2-server.authCodeGrant" id="apidoc.module.oauth2-server.authCodeGrant">module oauth2-server.authCodeGrant</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.authCodeGrant.authCodeGrant" id="apidoc.element.oauth2-server.authCodeGrant.authCodeGrant">
+        function <span class="apidocSignatureSpan">oauth2-server.</span>authCodeGrant
+        <span class="apidocSignatureSpan">(config, req, res, next, check)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AuthCodeGrant(config, req, res, next, check) {
+  this.config = config;
+  this.model = config.model;
+  this.req = req;
+  this.res = res;
+  this.check = check;
+
+  var self = this;
+  runner(fns, this, function (err) {
+    if (err &#x26;&#x26; res.oauthRedirect) {
+      // Custom redirect error handler
+      res.redirect(self.client.redirectUri + &#x27;?error=&#x27; + err.error +
+        &#x27;&#x26;error_description=&#x27; + err.error_description + &#x27;&#x26;code=&#x27; + err.code);
+
+      return self.config.continueAfterResponse ? next() : null;
+    }
+
+    next(err);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.oauth2-server.authorise" id="apidoc.module.oauth2-server.authorise">module oauth2-server.authorise</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.authorise.authorise" id="apidoc.element.oauth2-server.authorise.authorise">
+        function <span class="apidocSignatureSpan">oauth2-server.</span>authorise
+        <span class="apidocSignatureSpan">(config, req, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Authorise(config, req, next) {
+  this.config = config;
+  this.model = config.model;
+  this.req = req;
+
+  runner(fns, this, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  model: {}, // See below for specification
+  grants: [&#x27;password&#x27;],
+  debug: true
+});
+
+app.all(&#x27;/oauth/token&#x27;, app.oauth.grant());
+
+app.get(&#x27;/&#x27;, app.oauth.<span class="apidocCodeKeywordSpan">authorise</span>(), function (req, res) {
+  res.send(&#x27;Secret area&#x27;);
+});
+
+app.use(app.oauth.errorHandler());
+
+app.listen(3000);
+```
+...</pre></li>
     </ul>
 
 
@@ -219,6 +640,120 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.oauth2-server.grant" id="apidoc.module.oauth2-server.grant">module oauth2-server.grant</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.grant.grant" id="apidoc.element.oauth2-server.grant.grant">
+        function <span class="apidocSignatureSpan">oauth2-server.</span>grant
+        <span class="apidocSignatureSpan">(config, req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Grant(config, req, res, next) {
+  this.config = config;
+  this.model = config.model;
+  this.now = new Date();
+  this.req = req;
+  this.res = res;
+
+  runner(fns, this, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.oauth = oauthserver({
+  model: {}, // See below for specification
+  grants: [&#x27;password&#x27;],
+  debug: true
+});
+
+app.all(&#x27;/oauth/token&#x27;, app.oauth.<span class="apidocCodeKeywordSpan">grant</span>());
+
+app.get(&#x27;/&#x27;, app.oauth.authorise(), function (req, res) {
+  res.send(&#x27;Secret area&#x27;);
+});
+
+app.use(app.oauth.errorHandler());
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.oauth2-server.runner" id="apidoc.module.oauth2-server.runner">module oauth2-server.runner</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.runner.runner" id="apidoc.element.oauth2-server.runner.runner">
+        function <span class="apidocSignatureSpan">oauth2-server.</span>runner
+        <span class="apidocSignatureSpan">(fns, context, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runner(fns, context, next) {
+  var last = fns.length - 1;
+
+  (function run(pos) {
+    fns[pos].call(context, function (err) {
+      if (err || pos === last) return next(err);
+      run(++pos);
+    });
+  })(0);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.oauth2-server.toString" id="apidoc.module.oauth2-server.toString">module oauth2-server.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.toString.toString" id="apidoc.element.oauth2-server.toString.toString">
+        function <span class="apidocSignatureSpan">oauth2-server.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.oauth2-server.token" id="apidoc.module.oauth2-server.token">module oauth2-server.token</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.oauth2-server.token.token" id="apidoc.element.oauth2-server.token.token">
+        function <span class="apidocSignatureSpan">oauth2-server.</span>token
+        <span class="apidocSignatureSpan">(config, type, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Token(config, type, callback) {
+  if (config.model.generateToken) {
+    config.model.generateToken(type, config.req, function (err, token) {
+      if (err) return callback(error(&#x27;server_error&#x27;, false, err));
+      if (!token) return generateRandomToken(callback);
+      callback(false, token);
+    });
+  } else {
+    generateRandomToken(callback);
+  }
+}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
