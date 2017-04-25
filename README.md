@@ -1,4 +1,7 @@
-# api documentation for  [oauth2-server (v2.4.1)](https://github.com/thomseddon/node-oauth2-server)  [![npm package](https://img.shields.io/npm/v/npmdoc-oauth2-server.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-oauth2-server) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-oauth2-server.svg)](https://travis-ci.org/npmdoc/node-npmdoc-oauth2-server)
+# npmdoc-oauth2-server
+
+#### basic api documentation for  [oauth2-server (v2.4.1)](https://github.com/thomseddon/node-oauth2-server)  [![npm package](https://img.shields.io/npm/v/npmdoc-oauth2-server.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-oauth2-server) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-oauth2-server.svg)](https://travis-ci.org/npmdoc/node-npmdoc-oauth2-server)
+
 #### Complete, compliant and well tested module for implementing an OAuth2 Server/Provider with express in node.js
 
 [![NPM](https://nodei.co/npm/oauth2-server.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/oauth2-server)
@@ -75,7 +78,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "2.4.1"
+    "version": "2.4.1",
+    "bin": {}
 }
 ```
 
